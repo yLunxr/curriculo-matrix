@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.resume {
+    border: 2px solid #00ff00;
+    padding: 20px;
+}
+
+.resume h2 {
+    font-size: 24px;
+    border-bottom: 1px solid #00ff00;
+    padding-bottom: 10px;
+}
+
+.resume p {
+    margin: 5px 0;
+}
+
+.resume strong {
+    color: #00ff00;
+}
+
+.resume ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.resume li:before {
+    content: "> ";
+}
+
+/* Estilizando os números que caem */
+.numbers {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    pointer-events: none;
+}
+
+.number {
+    font-size: 16px;
+    color: #00ff00;
+    opacity: 0.8;
+    position: absolute;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) translateX(-50%) rotate(720deg);
+    }
+}
